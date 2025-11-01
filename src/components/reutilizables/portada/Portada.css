@@ -1,0 +1,35 @@
+/* El alto lo define la imagen, sin recortes ni deformación */
+.portada-fit{
+  position: relative;
+  width: 100%;
+  display: grid;           /* para apilar overlay encima */
+}
+.portada-fit__picture{ grid-area: 1 / 1; }
+.portada-fit__overlay{ grid-area: 1 / 1; }
+
+.portada-fit__img{
+  display: block;
+  width: 100%;
+  height: auto;            /* mantiene proporción */
+  object-fit: contain;     /* seguridad extra */
+}
+
+/* Overlay opcional */
+.portada-fit__overlay{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: left;
+  padding: 2rem;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.35));
+}
+
+.portada-fit__title{
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: .02em;
+  line-height: 1.15;
+  font-size: clamp(1.6rem, 4vw, 4rem);
+}

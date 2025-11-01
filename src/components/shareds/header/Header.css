@@ -1,0 +1,204 @@
+:root {
+    --scan-azul-oscuro: #132C4A;
+    --scan-azul-claro: #DFF2FE;
+    /* línea activa */
+    --scan-dropdown: #008BCD;
+    /* fondo dropdown */
+    --scan-dropdown-h: #132C4A;
+    /* hover dropdown */
+}
+
+/* ===== Centrado mobile de bloque-1/2 (por si querés forzar) ===== */
+@media (max-width: 575.98px) {
+
+    .bloque-1 .container,
+    .bloque-2 .container {
+        text-align: center;
+    }
+}
+
+/* ===== Logo responsive ===== */
+.logo-scanterra {
+    height: 90px !important;
+}
+
+@media (min-width: 768px) {
+    .logo-scanterra {
+        height: 90px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo-scanterra {
+        height: 100px;
+    }
+}
+
+/* ===== Redes ===== */
+.redes .sci {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #132C4A;
+    color: #fff;
+    opacity: .95;
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+.redes .sci:hover {
+    transform: translateY(-1px);
+    opacity: 1;
+}
+
+.redes i {
+    font-size: 18px;
+}
+
+.redes a {
+    text-decoration: none;
+}
+
+.botonCapac{
+    border: 1px solid #009AD5;
+    transition: all 0.3s ease-in-out;
+}
+
+.botonCapac:hover{
+    border: 1px solid #009AD5;
+    background-color: #0284b8 !important;
+}
+
+/* ===== Navbar dark: texto SIEMPRE blanco ===== */
+.navbar[data-bs-theme="dark"] .nav-link,
+.navbar[data-bs-theme="dark"] .navbar-nav .nav-link,
+.navbar[data-bs-theme="dark"] .navbar-toggler,
+.navbar[data-bs-theme="dark"] .navbar-brand {
+    color: #fff !important;
+}
+
+/* ===== Línea superior en hover/activo (links nivel 1) ===== */
+.navbar .nav-link {
+    position: relative;
+    color: #fff !important;
+    padding: .5rem .75rem;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-link {
+        padding: .5rem .9rem;
+    }
+}
+
+/* la "línea" */
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 4px;
+    width: 0;
+    background: var(--scan-azul-claro);
+    transition: width .18s ease-in-out;
+}
+
+/* hover dibuja la línea */
+.navbar .nav-link:hover::before {
+    width: 100%;
+}
+
+/* activo mantiene la línea */
+.navbar .nav-link.active::before {
+    width: 100%;
+}
+
+/* ===== Dropdown: fondo azul + hover oscuro + texto blanco ===== */
+.navbar .dropdown-menu {
+    background: var(--scan-dropdown);
+    border: none;
+    border-radius: .5rem;
+    padding: .25rem;
+}
+
+.navbar .dropdown-item {
+    color: #fff;
+    border-radius: .35rem;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background: var(--scan-dropdown-h);
+    color: #fff;
+}
+
+/* ===== Active en dropdown (mismo esquema) ===== */
+.navbar .dropdown-item.active {
+    background: var(--scan-azul-claro);
+    color: #0b2138;
+    font-weight: 700;
+}
+
+/* ===== Mobile: mejoras de tacto y contraste ===== */
+@media (max-width: 991.98px) {
+    .navbar .dropdown-menu {
+        background: var(--scan-dropdown);
+    }
+
+    .navbar .dropdown-item {
+        color: #fff;
+    }
+}
+
+/* ===== Tu base original ===== */
+.navbar .nav-link.active,
+.navbar .dropdown-item.active {
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-link {
+        padding: .5rem .75rem;
+    }
+
+    /* se superpone con el de arriba sin problema */
+}
+
+a.btn {
+    text-decoration: none;
+}
+
+/* ===== Sticky header ===== */
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* ===== Empuje por barra de Google Translate (si la usás) ===== */
+:root {
+    --gt-banner-h: 40px;
+}
+
+@media (max-width:575.98px) {
+    :root {
+        --gt-banner-h: 66px;
+    }
+}
+
+html:has(iframe.goog-te-banner-frame) body {
+    margin-top: var(--gt-banner-h) !important;
+}
+
+
+.btn-search {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-search:hover {
+    transform: translateY(-1px);
+}

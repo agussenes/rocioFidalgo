@@ -1,0 +1,194 @@
+:root {
+  --font-sans: 'Lato', sans-serif;
+  --scroll-thumb: #53012C;
+  --scroll-track: #132C4A1A;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  line-height: 1.25;
+}
+
+p {
+  font-size: 18px;
+}
+
+ul li {
+  font-size: 18px;
+
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D5005F;
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: #fff;
+}
+
+
+/* background custom  */
+
+
+.bg-custom {
+  background-color: #23b996;
+}
+
+.bg-custom-2 {
+  background-color: #EAF6FE;
+}
+
+.bg-custom-3 {
+  background-color: #DFF2FE;
+}
+
+.bg-celeste {
+  background-color: #009AD5 !important;
+}
+
+.text-color-custom{
+  color: #53012C;
+}
+
+.color-font {
+  color: #132C4A;
+}
+
+.color-font-2 {
+  color: #000080;
+}
+
+.color-font-negro {
+  color: #000;
+}
+
+
+.bg-gris {
+  background-color: #EAF6FE;
+}
+
+.bg-gris-oscuro {
+  background-color: #E5E5E5;
+}
+
+.font-gris {
+  color: #EAF6FE;
+}
+
+.font-celeste {
+  color: #009AD5;
+}
+
+
+.boton-web {
+  background-color: #000080;
+  color: #EAF6FE;
+  font-weight: 600;
+  border-radius: 7rem;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #EAF6FE;
+}
+
+.boton-web:hover {
+  transform: scale(1.02);
+  background-color: #01014b;
+  color: #EAF6FE;
+  border: 1px solid #EAF6FE;
+}
+
+.lineaHr {
+  border-bottom: 1px solid #132C4A;
+}
+
+.ocultarEnPc {
+  display: none !important;
+}
+
+
+/* estilo de ul con ticks  */
+
+.tick-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: .5rem;
+}
+
+.tick-list i {
+  margin-top: .25rem;
+  font-size: 1.1rem;
+}
+
+
+/* peso fuente  */
+
+.boldFuerte {
+  font-weight: 900;
+}
+
+/* estilo fuente  */
+
+.italic {
+  font-style: italic;
+}
+
+
+
+/* responsive  */
+
+@media (max-width:768px) {
+  .ocultarEnMobile {
+    display: none !important;
+  }
+
+  .ocultarEnPc {
+    display: block !important;
+  }
+
+}
+
+
+@media (max-width:490px) {
+  .btn-responsive {
+    font-size: 0.7rem !important;
+  }
+}

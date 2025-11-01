@@ -1,0 +1,56 @@
+.contenedorGenFooter{
+    transition: all 0.3s ease-in !important;
+}
+
+.tituloFooter{
+    color: #f1f1f1;
+    font-weight:600;
+    font-size: 1.3rem;
+}
+
+.imgFooter{
+    border-radius: 24px;
+}
+
+.linksFooter{
+    color: #132C4A;
+    transition: all 0.3s ease-in-out !important;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.linksFooter:hover{
+    border-bottom: 1px solid #132C4A;
+}
+
+.linksFooterW{
+    color: #f1f1f1;
+    transition: all 0.3s ease-in-out !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.linksFooterW:hover{
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.color-font li{
+    font-size: 0.9rem;
+}
+
+
+.sciFooter{
+    background-color: #D1035D ;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+}
+
+.sciFooter:hover{
+    transform: scale(1.03);
+}
+
+
+.sciFooter i{
+    color: #f1f1f1;
+}

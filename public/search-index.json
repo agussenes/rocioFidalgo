@@ -1,0 +1,17 @@
+[
+  {
+    "id": "home",
+    "title": "Inicio",
+    "path": "/",
+    "content": "Soluciones GeoEspaciales para agroindustria, minería, energía, gobierno, defensa, dominio marítimo.",
+    "tags": "home portada"
+  },
+  {
+    "id": "agro",
+    "title": "Agroindustria",
+    "path": "/servicios/agroindustria",
+    "content": "Monitoreo satelital, índices vegetativos, estimación de rendimiento, mapas de NDVI, predicciones.",
+    "tags": "servicios agro campo agricultura"
+  }
+  
+]

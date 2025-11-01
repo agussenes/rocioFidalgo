@@ -1,0 +1,116 @@
+/* Contenedor */
+.gallery-sw {
+    width: 100%;
+}
+
+/* Slide con espacio lateral */
+.gallery-sw__slide {
+    padding: 6px;
+}
+
+/* Botón/Thumb como “card” vertical */
+.gallery-sw__thumb {
+    position: relative;
+    display: flex;
+    /* <— apila imagen + caption */
+    flex-direction: column;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* IMAGEN: alto fijo por breakpoint + cover para uniformar */
+.gallery-sw__thumb img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 8px;
+
+}
+
+@media (min-width: 768px) {
+    .gallery-sw__thumb img {
+        height: 240px;
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery-sw__thumb img {
+        height: 260px;
+    }
+}
+
+/* CAPTION: ahora es flujo normal (no absolute) */
+.gallery-sw__caption {
+    position: static;
+    display: block;
+    text-align: center;
+    color: #132C4A;
+    background: transparent;
+    padding: 8px 10px;
+    font-size: clamp(.9rem, 1vw, 1rem);
+    line-height: 1.35;
+    min-height: 90px;
+    overflow: hidden;
+}
+
+
+/* LIGHTBOX */
+.gallery-sw__lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .85);
+    z-index: 1050;
+    display: grid;
+    align-items: center;
+    padding: 16px;
+}
+
+.gallery-sw__close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 1060;
+    border-radius: 999px;
+    padding: .25rem .6rem;
+}
+
+.gallery-sw__lightbox-swiper {
+    width: min(96vw, 1200px);
+    max-height: 90vh;
+}
+
+.gallery-sw__lightbox-slide {
+    display: grid;
+    place-items: center;
+}
+
+.gallery-sw__lightbox-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+/* Ajustes de los controles de Swiper para mejor visibilidad */
+.gallery-sw .swiper-button-prev,
+.gallery-sw .swiper-button-next,
+.gallery-sw__lightbox .swiper-button-prev,
+.gallery-sw__lightbox .swiper-button-next {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .5));
+}
+
+.gallery-sw .swiper-pagination-bullet,
+.gallery-sw__lightbox .swiper-pagination-bullet {
+    opacity: .6;
+}
+
+.gallery-sw .swiper-pagination-bullet-active,
+.gallery-sw__lightbox .swiper-pagination-bullet-active {
+    opacity: 1;
+}

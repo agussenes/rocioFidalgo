@@ -1,0 +1,30 @@
+.contenedorNotFound{
+    overflow: hidden;
+}
+
+.colorTextNT {
+    color: #1E6A7C;
+    font-weight: 900;
+}
+
+.tituloNT {
+    margin-top: -7rem;
+}
+
+.contenedorBotonNT {
+    margin-top: -5rem;
+}
+
+.botonNotFound {
+    background-color: #1D6A7D;
+    color: #f1f1f1;
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
+}
+
+.botonNotFound:hover {
+    transform: scale(1.02);
+    background-color: #1D6A7D;
+    color: #f1f1f1;
+    font-weight: 900;
+}
