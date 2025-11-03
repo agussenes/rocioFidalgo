@@ -3,6 +3,7 @@ import Seo from '../../seo/Seo';
 
 // componentes UI 
 import Portada from '../../components/reutilizables/portada/Portada';
+import { QuienSoy } from '../../components/sections/home/QuienSoy/QuienSoy';
 
 
 // imagenes
@@ -46,6 +47,7 @@ function Home() {
                 imageMobile={imgPortadaMobile}
                 overlay={true}
             />
+            <QuienSoy />
 
         </>
     )

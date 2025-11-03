@@ -91,7 +91,7 @@ ul li {
 }
 
 .color-font {
-  color: #132C4A;
+  color: #23b996;
 }
 
 .color-font-2 {
@@ -117,6 +117,10 @@ ul li {
 
 .font-celeste {
   color: #009AD5;
+}
+
+.border-custom{
+  border: 1px solid #23b996 !important;
 }
 
 

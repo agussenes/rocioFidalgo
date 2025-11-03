@@ -1,0 +1,16 @@
+# Activa mod_rewrite
+RewriteEngine On
+
+# Si tu app está en el root del dominio, dejá esto así:
+RewriteBase /
+
+# (Opcional) Si tenés una API, no la redirijas a index.html
+# Ajustá el prefijo si usás otro (/api, /backend, etc.)
+RewriteCond %{REQUEST_URI} !^/api/
+
+# No tocar archivos o directorios reales (js, css, imágenes, etc.)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Enviá todo lo demás a index.html (History API fallback)
+RewriteRule ^ index.html [L]
