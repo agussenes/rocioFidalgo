@@ -4,6 +4,7 @@ import Seo from '../../seo/Seo';
 // componentes UI 
 import Portada from '../../components/reutilizables/portada/Portada';
 import { QuienSoy } from '../../components/sections/home/QuienSoy/QuienSoy';
+import { PlanesEnHome } from '../../components/sections/home/Planes/PlanesEnHome';
 
 
 // imagenes
@@ -48,7 +49,7 @@ function Home() {
                 overlay={true}
             />
             <QuienSoy />
-
+            <PlanesEnHome />
         </>
     )
 }

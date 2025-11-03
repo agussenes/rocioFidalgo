@@ -2,7 +2,7 @@
 .portada-fit{
   position: relative;
   width: 100%;
-  display: grid;           /* para apilar overlay encima */
+  display: grid;           
 }
 .portada-fit__picture{ grid-area: 1 / 1; }
 .portada-fit__overlay{ grid-area: 1 / 1; }
@@ -10,8 +10,8 @@
 .portada-fit__img{
   display: block;
   width: 100%;
-  height: auto;            /* mantiene proporción */
-  object-fit: contain;     /* seguridad extra */
+  height: auto;            
+  object-fit: contain;     
 }
 
 /* Overlay opcional */
@@ -32,4 +32,13 @@
   letter-spacing: .02em;
   line-height: 1.15;
   font-size: clamp(1.6rem, 4vw, 4rem);
+}
+
+
+@media (max-width:991px) {
+  .portada-fit__overlay{
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+  }
 }

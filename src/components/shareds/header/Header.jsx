@@ -2,11 +2,11 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import LanguageSwitcher from "../utils/LanguageSwitcher";
-import { useSearch } from "../search/SearchProvider";
+// import { useSearch } from "../search/SearchProvider";
 import "./Header.css";
 
 export default function Header() {
-  const { setOpen } = useSearch();
+  // const { setOpen } = useSearch();
 
   // --- controlar el collapse ---
   const [expanded, setExpanded] = useState(false);
@@ -35,10 +35,10 @@ export default function Header() {
           >
             <Container className="d-flex justify-content-between ">
               <div className="logoRo">
-                <img src="/img/logoWhite.webp" alt="" height={60} />
+                <Link to='/'><img src="/img/logoWhite.webp" alt="" height={60} /></Link>
               </div>
 
-              <div>
+              <div className="ocultarEnMobile">
                 <Navbar.Toggle aria-controls="main-nav" />
                 <Navbar.Collapse id="main-nav">
                   <Nav className="me-auto">
@@ -51,15 +51,31 @@ export default function Header() {
               </div>
               {/* Acciones derecha */}
               <div className="d-flex align-items-center gap-3 ms-lg-3">
+                <LanguageSwitcher />
 
-                <div className="contenedorBusqueda">
+                <div className="ocultarEnPc">
+                  <Navbar.Toggle aria-controls="main-nav" />
+
+                </div>
+                {/* <div className="contenedorBusqueda">
                   <button type="button" className="btn-search" onClick={() => setOpen(true)}>
                     <i className="bi bi-search" />
                   </button>
-                </div>
-                <LanguageSwitcher />
+                </div> */}
               </div>
             </Container>
+            <div className="ocultarEnPc">
+              <Container>
+                <Navbar.Collapse id="main-nav" >
+                  <Nav className="menuHamburgesaLinks text-right">
+                    <Nav.Link as={NavLink} to="/" onClick={closeMenu}>Home</Nav.Link>
+                    <Nav.Link as={NavLink} to="/quien-soy" onClick={closeMenu}>Quien soy</Nav.Link>
+                    <Nav.Link as={NavLink} to="/quien-soy" onClick={closeMenu}>Planes</Nav.Link>
+                    <Nav.Link as={NavLink} to="/contacto" onClick={closeMenu}>Contacto</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
+            </div>
           </Navbar>
         </div>
       </nav>

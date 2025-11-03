@@ -21,7 +21,7 @@ export function QuienSoy() {
 
                 <Row className='align-items-center mb-5'>
                     <Col md={8} sm={12}>
-                        <h2 className="color-font-2 text-uppercase">Sobre Mí</h2>
+                        <h2 className="color-font-2 text-uppercase fw-bold">Sobre Mí</h2>
                         <h5 className="color-font-2 ">Tu Compañera en el Camino Hacia el Éxito</h5>
                         <p className="lead">
                             Con más de 5 años de experiencia en el mundo del fitness, he ayudado a cientos de personas a transformar sus vidas. Mi enfoque combina ciencia del ejercicio, nutrición y psicología deportiva para crear programas que realmente funcionan.
