@@ -1,7 +1,12 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import './Footer.css'
+// estilo 
+import './Footer.css';
+
+// Componerntes UI 
+import LanguageSwitcher from "../utils/LanguageSwitcher";
+
 
 function Footer() {
   return (
@@ -9,9 +14,11 @@ function Footer() {
       <section className="d-flex-container-fluid bg-custom py-4 contenedorGenFooter">
         <Container>
           <Row className="d-flex justify-content-between">
-            <Col sm={12} md={6} lg={4} className="p-2 ">
-              <img src="/img/logoWhite.webp" alt="" loading="lazy" className="imgFooter img-fluid" />
+            <Col sm={12} md={6} lg={4} className="p-2 d-flex justify-content-center">
+              <div>
+                <img src="/img/logoWhite.webp" alt="" loading="lazy" className="imgFooter img-fluid" />
 
+              </div>
             </Col>
             <Col sm={12} md={6} lg={4} className="p-2 text-center">
               <h6 className=" text-uppercase  tituloFooter ">Soy Rocio Fidalgo</h6>
@@ -27,6 +34,16 @@ function Footer() {
                 <a href="http://" className="sciFooter"><i className="bi bi-instagram"></i></a>
                 <a href="http://" className="sciFooter"><i className="bi bi-linkedin"></i></a>
                 <a href="http://" className="sciFooter"><i className="bi bi-twitter-x"></i></a>
+              </div>
+              <div className="my-4">
+                <div>
+                  <h6 className=" text-uppercase  tituloFooter mb-3">Cambia a tu idioma</h6>
+
+                </div>
+                <div className="d-flex justify-content-center">
+                <LanguageSwitcher />
+
+                </div>
               </div>
 
             </Col>

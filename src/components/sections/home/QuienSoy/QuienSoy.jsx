@@ -37,9 +37,9 @@ export function QuienSoy() {
                 <Row className=''>
                     {cardInfo.map((inf) => (
                         <>
-                            <Col lg={3} md={6} key={inf.titulo} className=' '>
+                            <Col lg={6} md={6} key={inf.titulo} className=' mb-3 '>
 
-                                <div className="card gap-3 p-2 shadow border-custom">
+                                <div className="card gap-3 p-3 shadow border-custom">
                                     <div className="iconCardQS">
                                         <i className={inf.icon}></i>
                                     </div>
